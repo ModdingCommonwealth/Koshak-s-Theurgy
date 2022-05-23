@@ -1,9 +1,4 @@
-# Fabric Example Mod
+# Koshak's Theurgy
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Download
+At the moment, you can't download compiled .jar mod file. You need to build it yourself
