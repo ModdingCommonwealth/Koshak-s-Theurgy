@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "theurgy:items/theurgioum_sword"
+  }
+}

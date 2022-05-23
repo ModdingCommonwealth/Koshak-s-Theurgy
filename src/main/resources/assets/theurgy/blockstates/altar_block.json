@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "theurgy:block/altar_block" }
+  }
+}
