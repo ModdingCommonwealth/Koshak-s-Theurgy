@@ -15,7 +15,7 @@ public class AltarBlockEntity extends BlockEntity implements Inventory {
     public AltarBlockEntity(BlockPos pos, BlockState state) {
         super(Main.ALTAR_BLOCK_ENTITY, pos, state);
     }
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, new ItemStack(Main.BloodyStone));
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
     @Override
     public int size() {
         return inventory.size();
