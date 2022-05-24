@@ -39,8 +39,8 @@ public class AltarBlock extends Block implements BlockEntityProvider {
             altar.setStack(0, stack);
 
         }
-        return super.onUse(state, world, pos, player, hand, hit);
+        return ActionResult.SUCCESS;
     }
-    on
+
 
 }
