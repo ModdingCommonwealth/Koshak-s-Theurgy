@@ -7,6 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -33,12 +34,13 @@ public class AltarBlock extends Block implements BlockEntityProvider {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack stack = player.getStackInHand(hand);
+        ItemStack stack = player.getStackInHand(hand).copy();
         if(world.getBlockEntity(pos) instanceof AltarBlockEntity altar) {
-            altar.removeStack(0);
             altar.setStack(0, stack);
+
         }
         return super.onUse(state, world, pos, player, hand, hit);
     }
+    on
 
 }

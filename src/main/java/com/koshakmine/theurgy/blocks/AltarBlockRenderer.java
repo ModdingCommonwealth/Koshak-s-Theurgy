@@ -24,13 +24,8 @@ public class AltarBlockRenderer<T extends BlockEntity> implements BlockEntityRen
     public void render(BlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
         if(entity instanceof AltarBlockEntity altar) {
             ItemStack stack = altar.getStack(0);
-            if(altar.getStack(0).isEmpty()) {
-                Main.LOGGER.info("Pizda");
-            } else {
-                Main.LOGGER.info(stack.getItem().getTranslationKey());
-            }
             matrices.push();
-            if(altar.getStack(0).isEmpty()) {
+            if(!altar.getStack(0).isEmpty()) {
                 matrices.translate(0.5, 1.1, 0.5);
                 int lightAbove = WorldRenderer.getLightmapCoordinates(entity.getWorld(), entity.getPos().up());
                 MinecraftClient.getInstance().getItemRenderer().renderItem(stack, ModelTransformation.Mode.GROUND, lightAbove, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, 0);
