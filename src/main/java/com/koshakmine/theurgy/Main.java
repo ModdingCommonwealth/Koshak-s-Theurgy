@@ -5,14 +5,17 @@ import com.koshakmine.theurgy.blocks.AltarBlockEntity;
 import com.koshakmine.theurgy.items.TheurgioumSword;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.*;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
@@ -31,6 +34,8 @@ public class Main implements ModInitializer {
 	public static final AltarBlock ALTAR_BLOCK = new AltarBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f));
 	public static BlockEntityType<AltarBlockEntity> ALTAR_BLOCK_ENTITY;
 
+
+
 	@Override
 	public void onInitialize() {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "theurgioum_sword"), TheurgioumSword);
@@ -39,6 +44,9 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bloody_stone"), BloodyStone);
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "altar_block"), ALTAR_BLOCK);
 		ALTAR_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "theurgy:altar_block_entity", FabricBlockEntityTypeBuilder.create(AltarBlockEntity::new, ALTAR_BLOCK).build(null));
+
+		//Events
+
 		LOGGER.info("Loading all magic things...");
 	}
 	//Creative tabs

@@ -3,5 +3,7 @@
   "item.theurgy.bloody_essence": "Bloody Essence",
   "item.theurgy.bloody_stone": "Bloody Stone",
   "item.theurgy.theurgioum_ingot": "Theurgioum Ingot",
-  "itemGroup.theurgy.theurgytab": "Koshak's Theurgy"
+  "itemGroup.theurgy.theurgytab": "Koshak's Theurgy",
+  "tooltip.theurgy.thswdinf": "Sword made of Theorgioum, needed for getting Bloody Essence",
+  "tooltip.theurgy.holdshift": "Hold §eSHIFT§r for §emore§r Information!"
 }
